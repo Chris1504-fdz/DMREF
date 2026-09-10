@@ -45,11 +45,11 @@
 **The exported design:** 23 conditions × 3 replicates = 69 rows, fabricated discrepancy 0.2525, max |off-diag r| = 0.098.
 
 - Notebook: [`analysis/doe/experiment03_hfo2_doe_design.ipynb`](analysis/doe/experiment03_hfo2_doe_design.ipynb)
-- Run sheet: `output/experiment03_hfo2_doe_design/PdO_HfO2_LHS_SA_design.xlsx`
+- Run sheet: `output/previous_studies/experiment03_hfo2_doe_design/PdO_HfO2_LHS_SA_design.xlsx`
 - Presentation figures:
-  - ![Direct method comparison](output/experiment03_hfo2_doe_design/direct_method_comparison.png)
-  - ![5-batch sequential comparison](output/experiment03_hfo2_doe_design/method_comparison.png)
-  - ![What the metrics measure (2-D demo)](output/experiment03_hfo2_doe_design/metric_meaning_2d_demo.png)
+  - ![Direct method comparison](output/previous_studies/experiment03_hfo2_doe_design/direct_method_comparison.png)
+  - ![5-batch sequential comparison](output/previous_studies/experiment03_hfo2_doe_design/method_comparison.png)
+  - ![What the metrics measure (2-D demo)](output/previous_studies/experiment03_hfo2_doe_design/metric_meaning_2d_demo.png)
 
 ---
 
@@ -73,7 +73,7 @@
 
 This mirrors the experiment02 precedent on Al₂O₃, where Batch 2 capped only the vacuum-anneal (at 550 °C there; lower on HfO₂). Under the cap, only 14 of the original 23 conditions remain feasible — so the design was regenerated rather than patched. Note also the large replicate scatter on the good conditions (CV ≈ 30–60%), which supports the planned SEM²-noise GP treatment downstream.
 
-- Notebook: [`analysis/received_data_analysis/experiment03_hfo2_batch1_analysis.ipynb`](analysis/received_data_analysis/experiment03_hfo2_batch1_analysis.ipynb)
+- Notebook: [`analysis/received_data_analysis/experiment03_hfo2_batch1_analysis_doe_n_caped_300.ipynb`](analysis/received_data_analysis/experiment03_hfo2_batch1_analysis_doe_n_caped_300.ipynb)
 - Transcribed data: `output/experiment03_hfo2_batch1_analysis/received_batch1_transcribed.xlsx` *(source was a screenshot — replace with the raw file when it lands in `raw_data_received/`)*
 - Presentation figures:
   - ![Batch 1 outcomes vs the anneal cap](output/experiment03_hfo2_batch1_analysis/feasibility_temperature_plane.png)
@@ -88,6 +88,7 @@ A **brand-new LHS+SA design** (not conditioned on the previous table) generated 
 - **23 conditions (IDs 1–23) × 3 replicates = 69 rows**, seed 20
 - Vac Ann spans 25–295 °C (all under the cap); oxidation uses its full 200–500 °C range
 - Ox Press split 12/11; unit-cube discrepancy 0.0681
+- **Factor independence: max |off-diagonal correlation| = 0.099** — well below the 0.3 confounding threshold, so downstream regression/GP can separate factor effects cleanly
 - The measured #3 and #4 from the old design lie inside the new bounds and remain valid extra data points for the GP — nothing from the first delivery is wasted
 
 - Run sheet: **`output/experiment03_hfo2_batch1_analysis/PdO_HfO2_LHS_SA_design_v2_anncap300.xlsx`** (design_full / design_unique / config / provenance)
@@ -95,6 +96,7 @@ A **brand-new LHS+SA design** (not conditioned on the previous table) generated 
   - ![New design temperature plane](output/experiment03_hfo2_batch1_analysis/redesign_temperature_plane.png)
   - ![New design factor coverage](output/experiment03_hfo2_batch1_analysis/redesign_factor_distributions.png)
   - ![New design pair plot](output/experiment03_hfo2_batch1_analysis/redesign_pairplot.png)
+  - ![New design factor correlation heatmap](output/experiment03_hfo2_batch1_analysis/redesign_correlation_matrix.png)
 
 > ⚠️ The new sheet reuses IDs 1–23, which collide with the old design's numbering (the delivered runs were old #1–5). The `Batch` column ("Batch 1 (anneal-capped)") and the provenance sheet disambiguate — state the design generation explicitly when circulating the run sheet.
 
@@ -111,8 +113,8 @@ A **brand-new LHS+SA design** (not conditioned on the previous table) generated 
 | Purpose | Path |
 |---------|------|
 | Consolidated DoE study (method comparison + initial design) | `analysis/doe/experiment03_hfo2_doe_design.ipynb` |
-| Batch-1 data analysis + anneal-capped redesign | `analysis/received_data_analysis/experiment03_hfo2_batch1_analysis.ipynb` |
-| Original (superseded) run sheet | `output/experiment03_hfo2_doe_design/PdO_HfO2_LHS_SA_design.xlsx` |
+| Batch-1 data analysis + anneal-capped redesign | `analysis/received_data_analysis/experiment03_hfo2_batch1_analysis_doe_n_caped_300.ipynb` |
+| Original (superseded) run sheet | `output/previous_studies/experiment03_hfo2_doe_design/PdO_HfO2_LHS_SA_design.xlsx` |
 | **Current run sheet (send this one)** | `output/experiment03_hfo2_batch1_analysis/PdO_HfO2_LHS_SA_design_v2_anncap300.xlsx` |
 | LHS+SA optimizer tutorial (build-it-yourself) | `analysis/tutorial/lhs_sa_build_it_yourself.ipynb` |
 | Exploratory originals (archived) | `analysis/temp/experiment03_hfo2_{sobol,doe}_design.ipynb` |
