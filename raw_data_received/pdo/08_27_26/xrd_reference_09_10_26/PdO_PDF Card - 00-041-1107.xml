@@ -1,0 +1,1943 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="#stylesheet"?>
+
+<!DOCTYPE doc [<!ATTLIST xsl:stylesheet id ID #REQUIRED>]>
+<pdfcard>
+<pdf_data ApplicationName="PDF-5+ 2026" ApplicationVersion="4.26.0.4" ProductCode="PLU2026">
+<pdf_number>00-041-1107</pdf_number>
+<status>Primary</status>
+<quality_mark>Star</quality_mark>
+<pressure_temperature>Ambient</pressure_temperature>
+<temperature>298.0 K (Assumed)</temperature>
+<chemical_formula>Pd O</chemical_formula>
+<empirical_formula>O Pd</empirical_formula>
+<weight_percent>O13.07 Pd86.93</weight_percent>
+<atomic_percent>O50.00 Pd50.00</atomic_percent>
+<chemical_name>Palladium Oxide</chemical_name>
+<mineral_name>Palladinite</mineral_name>
+<ima_symbol>Pdn</ima_symbol>
+<entry_date>09/01/1991</entry_date>
+<patrad>CuKα (1.5418 Å)</patrad>
+<filttyp>Graph Mono</filttyp>
+<internal_standard>Si</internal_standard>
+<instrument>Diffractometer</instrument>
+<lower>15.00 Å</lower>
+<source>Diffractometer - Peak</source>
+<xstal_system>Tetragonal</xstal_system>
+<spgr>P42/mmc (131)</spgr>
+<cell_a>3.0456(6)</cell_a>
+<cell_c>5.3387(45)</cell_c>
+<cell_vol>49.52</cell_vol>
+<z>2.00</z>
+<cell_mv>24.76</cell_mv>
+<authcovera>1.753</authcovera>
+<xtldx>8.21</xtldx>
+<color>Black</color>
+<ss>F(30) = 42.3(0.0182, 39)</ss>
+<xtlsg>P42/mmc (131)</xtlsg>
+<xtlmolwt>122.42</xtlmolwt>
+<xtla>3.046</xtla>
+<xtlb>3.046</xtlb>
+<xtlc>5.339</xtlc>
+<xtlal>90.00</xtlal>
+<xtlbe>90.00</xtlbe>
+<xtlga>90.00</xtlga>
+<xtlvol>49.52</xtlvol>
+<xtlz>2.00</xtlz>
+<xtlcovera>1.753</xtlcovera>
+<xtlaoverb>1.000</xtlaoverb>
+<xtlcoverb>1.753</xtlcoverb>
+<redcell_a>3.046</redcell_a>
+<redcell_b>3.046</redcell_b>
+<redcell_c>5.339</redcell_c>
+<redcell_al>90.00</redcell_al>
+<redcell_be>90.00</redcell_be>
+<redcell_ga>90.00</redcell_ga>
+<redcellvol>49.52</redcellvol>
+<structure_info>Atomic parameters are cross-referenced from PDF entry 04-007-4016</structure_info>
+<ac_space_group>P42/mmc (131)</ac_space_group>
+<ac_unit_cell_a>3.042(1)</ac_unit_cell_a>
+<ac_unit_cell_b>3.042(1)</ac_unit_cell_b>
+<ac_unit_cell_c>5.351(3)</ac_unit_cell_c>
+<ac_unit_cell_alpha>90</ac_unit_cell_alpha>
+<ac_unit_cell_beta>90</ac_unit_cell_beta>
+<ac_unit_cell_gamma>90</ac_unit_cell_gamma>
+<sg_sym_ops>
+<sg_sym_op>
+<seq>1</seq>
+<operator>x,y,z</operator>
+</sg_sym_op>
+<sg_sym_op>
+<seq>2</seq>
+<operator>-x,-y,-z</operator>
+</sg_sym_op>
+<sg_sym_op>
+<seq>3</seq>
+<operator>-x,-y,z</operator>
+</sg_sym_op>
+<sg_sym_op>
+<seq>4</seq>
+<operator>x,y,-z</operator>
+</sg_sym_op>
+<sg_sym_op>
+<seq>5</seq>
+<operator>-y,x,z+1/2</operator>
+</sg_sym_op>
+<sg_sym_op>
+<seq>6</seq>
+<operator>y,-x,-z+1/2</operator>
+</sg_sym_op>
+<sg_sym_op>
+<seq>7</seq>
+<operator>y,-x,z+1/2</operator>
+</sg_sym_op>
+<sg_sym_op>
+<seq>8</seq>
+<operator>-y,x,-z+1/2</operator>
+</sg_sym_op>
+<sg_sym_op>
+<seq>9</seq>
+<operator>-x,y,-z</operator>
+</sg_sym_op>
+<sg_sym_op>
+<seq>10</seq>
+<operator>x,-y,z</operator>
+</sg_sym_op>
+<sg_sym_op>
+<seq>11</seq>
+<operator>x,-y,-z</operator>
+</sg_sym_op>
+<sg_sym_op>
+<seq>12</seq>
+<operator>-x,y,z</operator>
+</sg_sym_op>
+<sg_sym_op>
+<seq>13</seq>
+<operator>y,x,-z+1/2</operator>
+</sg_sym_op>
+<sg_sym_op>
+<seq>14</seq>
+<operator>-y,-x,z+1/2</operator>
+</sg_sym_op>
+<sg_sym_op>
+<seq>15</seq>
+<operator>-y,-x,-z+1/2</operator>
+</sg_sym_op>
+<sg_sym_op>
+<seq>16</seq>
+<operator>y,x,z+1/2</operator>
+</sg_sym_op>
+</sg_sym_ops>
+<atomic_coords>
+<atomic_coord>
+<atom>Pd</atom>
+<num>1</num>
+<wyckoff>2c</wyckoff>
+<symmetry>mmm.</symmetry>
+<x>0.0</x>
+<y>0.5</y>
+<z>0.0</z>
+<sof>1.0</sof>
+<aet>4#c</aet>
+</atomic_coord>
+<atomic_coord>
+<atom>O</atom>
+<num>2</num>
+<wyckoff>2e</wyckoff>
+<symmetry>-4m2</symmetry>
+<x>0.0</x>
+<y>0.0</y>
+<z>0.25</z>
+<sof>1.0</sof>
+<aet>4-a</aet>
+</atomic_coord>
+</atomic_coords>
+<crystal_properties>Centrosymmetric</crystal_properties>
+<subfile_indicator>Common Phase, Inorganic, Metal &amp; Alloy, Mineral Related (Mineral, Natural), Superconducting Material (Superconductor Reaction Product)</subfile_indicator>
+<strunz_class>4.AB.30</strunz_class>
+<pearson>tP4.00</pearson>
+<rep_struc>Pt S</rep_struc>
+<rep_struc_alpha_order>Pt S</rep_struc_alpha_order>
+<lpf_rep_struc>Pt S,tP4,131</lpf_rep_struc>
+<lpf_rep_struc_alpha_order>Pt S,tP4,131</lpf_rep_struc_alpha_order>
+<cross_ref_pdf_numbers>00-006-0515 (Alternate), 04-002-4417 (Alternate), 04-005-4781 (Alternate), 04-006-5918 (Alternate), 04-007-4016 (Alternate), 04-007-6608 (Alternate)</cross_ref_pdf_numbers>
+<references>
+<reference_group>
+<type>Primary Reference</type>
+<reference>Welton-Holzer, J., McCarthy, G., North Dakota State University, Fargo, North Dakota, USA. ICDD Grant-in-Aid 1989.</reference>
+</reference_group>
+<reference_group>
+<type>Crystal Structure</type>
+<reference>Crystal Structure Source: LPF.</reference>
+</reference_group>
+</references>
+<database_comments>Additional Patterns: To replace 00-006-0515. Color: Black. General Comments: Average relative standard deviation in intensity of the ten strongest reflections for three specimen mounts = 4%. Validated by a calculated pattern. Sample Source or Locality: Sample obtained from ROC/RIC.</database_comments>
+</pdf_data>
+<graphs>
+<chart_image format="png" height="270" width="470">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</chart_image>
+<stick_series>
+<intensity>
+<theta>29.316</theta>
+<da>3.0440</da>
+<intensity>3</intensity>
+<h>1</h>
+<k>0</k>
+<l>0</l>
+<F/>
+</intensity>
+<intensity>
+<theta>33.549</theta>
+<da>2.6690</da>
+<intensity>22</intensity>
+<h>0</h>
+<k>0</k>
+<l>2</l>
+<F/>
+</intensity>
+<intensity>
+<theta>33.836</theta>
+<da>2.6470</da>
+<intensity>100</intensity>
+<h>1</h>
+<k>0</k>
+<l>1</l>
+<F/>
+</intensity>
+<intensity>
+<theta>41.927</theta>
+<da>2.1530</da>
+<intensity>14</intensity>
+<h>1</h>
+<k>1</k>
+<l>0</l>
+<F/>
+</intensity>
+<intensity>
+<theta>45.138</theta>
+<da>2.0070</da>
+<intensity>1</intensity>
+<h>1</h>
+<k>0</k>
+<l>2</l>
+<F/>
+</intensity>
+<intensity>
+<theta>54.715</theta>
+<da>1.6762</da>
+<intensity>20</intensity>
+<h>1</h>
+<k>1</k>
+<l>2</l>
+<F/>
+</intensity>
+<intensity>
+<theta>60.218</theta>
+<da>1.5355</da>
+<intensity>15</intensity>
+<h>1</h>
+<k>0</k>
+<l>3</l>
+<F/>
+</intensity>
+<intensity>
+<theta>60.782</theta>
+<da>1.5226</da>
+<intensity>11</intensity>
+<h>2</h>
+<k>0</k>
+<l>0</l>
+<F/>
+</intensity>
+<intensity>
+<theta>70.521</theta>
+<da>1.3343</da>
+<intensity>6</intensity>
+<h>0</h>
+<k>0</k>
+<l>4</l>
+<F/>
+</intensity>
+<intensity>
+<theta>71.251</theta>
+<da>1.3224</da>
+<intensity>15</intensity>
+<h>2</h>
+<k>0</k>
+<l>2</l>
+<F/>
+</intensity>
+<intensity>
+<theta>71.457</theta>
+<da>1.3191</da>
+<intensity>13</intensity>
+<h>2</h>
+<k>1</k>
+<l>1</l>
+<F/>
+</intensity>
+<intensity>
+<theta>85.534</theta>
+<da>1.1344</da>
+<intensity>3</intensity>
+<h>1</h>
+<k>1</k>
+<l>4</l>
+<F/>
+</intensity>
+<intensity>
+<theta>90.834</theta>
+<da>1.0815</da>
+<intensity>5</intensity>
+<h>2</h>
+<k>1</k>
+<l>3</l>
+<F/>
+</intensity>
+<intensity>
+<theta>91.353</theta>
+<da>1.0767</da>
+<intensity>5</intensity>
+<h>2</h>
+<k>2</k>
+<l>0</l>
+<F/>
+</intensity>
+<intensity>
+<theta>98.721</theta>
+<da>1.0151</da>
+<intensity>2</intensity>
+<h>3</h>
+<k>0</k>
+<l>0</l>
+<F/>
+</intensity>
+<intensity>
+<theta>99.720</theta>
+<da>1.0076</da>
+<intensity>5</intensity>
+<h>1</h>
+<k>0</k>
+<l>5</l>
+<F/>
+</intensity>
+<intensity>
+<theta>100.263</theta>
+<da>1.0036</da>
+<intensity>5</intensity>
+<h>2</h>
+<k>0</k>
+<l>4</l>
+<F/>
+</intensity>
+<intensity>
+<theta>100.938</theta>
+<da>0.9987</da>
+<intensity>5</intensity>
+<h>2</h>
+<k>2</k>
+<l>2</l>
+<F/>
+</intensity>
+<intensity>
+<theta>101.162</theta>
+<da>0.9971</da>
+<intensity>5</intensity>
+<h>3</h>
+<k>0</k>
+<l>1</l>
+<F/>
+</intensity>
+<intensity>
+<theta>106.236</theta>
+<da>0.9630</da>
+<intensity>2</intensity>
+<h>3</h>
+<k>1</k>
+<l>0</l>
+<F/>
+</intensity>
+<intensity>
+<theta>107.805</theta>
+<da>0.9533</da>
+<intensity>&lt;1</intensity>
+<h>2</h>
+<k>1</k>
+<l>4</l>
+<F/>
+</intensity>
+<intensity>
+<theta>116.528</theta>
+<da>0.9057</da>
+<intensity>4</intensity>
+<h>3</h>
+<k>1</k>
+<l>2</l>
+<F/>
+</intensity>
+<intensity>
+<theta>119.943</theta>
+<da>0.8897</da>
+<intensity>&lt;1</intensity>
+<h>0</h>
+<k>0</k>
+<l>6</l>
+<F/>
+</intensity>
+<intensity>
+<theta>121.790</theta>
+<da>0.8816</da>
+<intensity>1</intensity>
+<h>3</h>
+<k>0</k>
+<l>3</l>
+<F/>
+</intensity>
+<intensity>
+<theta>130.881</theta>
+<da>0.8469</da>
+<intensity>1</intensity>
+<h>3</h>
+<k>1</k>
+<l>3</l>
+<F/>
+</intensity>
+<intensity>
+<theta>131.568</theta>
+<da>0.8446</da>
+<intensity>2</intensity>
+<h>3</h>
+<k>2</k>
+<l>0</l>
+<F/>
+</intensity>
+<intensity>
+<theta>132.889</theta>
+<da>0.8403</da>
+<intensity>4</intensity>
+<h>2</h>
+<k>1</k>
+<l>5</l>
+<F/>
+</intensity>
+<intensity>
+<theta>133.584</theta>
+<da>0.8381</da>
+<intensity>5</intensity>
+<h>2</h>
+<k>2</k>
+<l>4</l>
+<F/>
+</intensity>
+<intensity>
+<theta>134.816</theta>
+<da>0.8343</da>
+<intensity>4</intensity>
+<h>3</h>
+<k>2</k>
+<l>1</l>
+<F/>
+</intensity>
+<intensity>
+<theta>138.984</theta>
+<da>0.8224</da>
+<intensity>2</intensity>
+<h>1</h>
+<k>1</k>
+<l>6</l>
+<F/>
+</intensity>
+</stick_series>
+</graphs>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" id="stylesheet" version="1.0">
+    <xsl:template match="pdfcard">
+        <html>
+            <body bgcolor="lightblue">
+                <table border="0" width="75%" align="center">
+                    <tr>
+                        <td align="center">
+                            <table border="0">
+                                <tr>
+                                    <td align="center">
+                                        <h2>PDF Card</h2>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table border="1">
+                                <tr>
+                                    <td>
+                                        <b>PDF Number</b>
+                                    </td>
+                                    <td colspan="2">
+                                        <xsl:value-of select="pdf_data/pdf_number" />
+                                    </td>
+                                    <td>
+                                        <b>Status</b>
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/status" />
+                                    </td>
+                                    <td colspan="2">
+                                        <b>Quality Mark</b>
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/quality_mark" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Environment</b>
+                                    </td>
+                                    <td colspan="7">
+                                        <xsl:value-of select="pdf_data/pressure_temperature" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Temperature</b>
+                                    </td>
+                                    <td colspan="7">
+                                        <xsl:value-of select="pdf_data/temperature" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Pressure</b>
+                                    </td>
+                                    <td colspan="7">
+                                        <xsl:value-of select="pdf_data/pressure" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Phase</b>
+                                    </td>
+                                    <td colspan="7">
+                                        <xsl:value-of select="pdf_data/phase" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Chemical Formula</b>
+                                    </td>
+                                    <td colspan="7">
+                                        <xsl:value-of select="pdf_data/chemical_formula" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Structural Formula</b>
+                                    </td>
+                                    <td colspan="7">
+                                        <xsl:value-of select="pdf_data/structural_formula" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Empirical Formula</b>
+                                    </td>
+                                    <td colspan="7">
+                                        <xsl:value-of select="pdf_data/empirical_formula" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Refined Formula</b>
+                                    </td>
+                                    <td colspan="7">
+                                        <xsl:value-of select="pdf_data/refined_formula" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Weight %</b>
+                                    </td>
+                                    <td colspan="7">
+                                        <xsl:value-of select="pdf_data/weight_percent" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Atomic %</b>
+                                    </td>
+                                    <td colspan="7">
+                                        <xsl:value-of select="pdf_data/atomic_percent" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Compound Name</b>
+                                    </td>
+                                    <td colspan="7">
+                                        <xsl:value-of select="pdf_data/chemical_name" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Mineral Name</b>
+                                    </td>
+                                    <td colspan="7">
+                                        <xsl:value-of select="pdf_data/mineral_name" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>IMA Symbol</b>
+                                    </td>
+                                    <td colspan="7">
+                                        <xsl:value-of select="pdf_data/ima_symbol" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>IMA No.</b>
+                                    </td>
+                                    <td colspan="7">
+                                        <xsl:value-of select="pdf_data/ima_number" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Zeolite Name</b>
+                                    </td>
+                                    <td colspan="7">
+                                        <xsl:value-of select="pdf_data/zeolite_name" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Alternate Name</b>
+                                    </td>
+                                    <td colspan="7">
+                                        <xsl:value-of select="pdf_data/common_name" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>CAS Number</b>
+                                    </td>
+                                    <td colspan="7">
+                                        <xsl:value-of select="pdf_data/cas" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Entry Date</b>
+                                    </td>
+                                    <td colspan="7">
+                                        <xsl:value-of select="pdf_data/entry_date" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Modification Date</b>
+                                    </td>
+                                    <td colspan="7">
+                                        <xsl:value-of select="pdf_data/last_mod_date" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Modifications</b>
+                                    </td>
+                                    <td colspan="7">
+                                        <xsl:value-of select="pdf_data/last_modifications" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="4">
+                                        <font size="4">
+                                            <b>Experimental</b>
+                                        </font>
+                                    </td>
+                                    <td>
+                                        <b>Rad</b>
+                                    </td>
+                                    <td>
+                                        <b>λ</b>
+                                    </td>
+                                    <td>
+                                        <b>Filter</b>
+                                    </td>
+                                    <td>
+                                        <b>d-Spacing</b>
+                                    </td>
+                                    <td>
+                                        <b>Cutoff</b>
+                                    </td>
+                                    <td>
+                                        <b>Intensity</b>
+                                    </td>
+                                    <td>
+                                        <b>I/Ic</b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/patrad" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/lambda" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/filttyp" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/instrument" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/lower" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/source" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/iic" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Camera Diameter</b>
+                                    </td>
+                                    <td>
+                                        <b>Internal Standard</b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/diameter" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/internal_standard" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="12">
+                                        <font size="4">
+                                            <b>Physical</b>
+                                        </font>
+                                    </td>
+                                    <td>
+                                        <b>SYS</b>
+                                    </td>
+                                    <td>
+                                        <b>
+                                            <xsl:value-of select="pdf_data/spgr_label" />
+                                        </b>
+                                    </td>
+                                    <td>
+                                        <b>Aspect</b>
+                                    </td>
+                                    <td>
+                                        <b>Modulation Wave Vectors</b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/xstal_system" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/spgr" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/spgraspect" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/mod_wave_vectors" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="4">
+                                        <b>Author's Unit Cell</b>
+                                    </td>
+                                    <td>
+                                        <b>a</b>
+                                    </td>
+                                    <td>
+                                        <b>b</b>
+                                    </td>
+                                    <td>
+                                        <b>c</b>
+                                    </td>
+                                    <td>
+                                        <b>α</b>
+                                    </td>
+                                    <td>
+                                        <b>β</b>
+                                    </td>
+                                    <td>
+                                        <b>γ</b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/cell_a" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/cell_b" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/cell_c" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/cell_alpha" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/cell_beta" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/cell_gamma" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Volume</b>
+                                    </td>
+                                    <td>
+                                        <b>Z</b>
+                                    </td>
+                                    <td>
+                                        <b>Molecular Volume/Formula Unit Volume</b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/cell_vol" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/z" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/cell_mv" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">
+                                        <b>Author's Unit Cell Axial Ratio</b>
+                                    </td>
+                                    <td>
+                                        <b>c/a</b>
+                                    </td>
+                                    <td>
+                                        <b>a/b</b>
+                                    </td>
+                                    <td>
+                                        <b>c/b</b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/authcovera" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/authaoverb" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/authcoverb" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">
+                                        <b>Density</b>
+                                    </td>
+                                    <td>
+                                        <b>Dcalc</b>
+                                    </td>
+                                    <td>
+                                        <b>Dmeas</b>
+                                    </td>
+                                    <td>
+                                        <b>Dstruc</b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/xtldx" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/dm" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/ds" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>SS/FOM</b>
+                                    </td>
+                                    <td>
+                                        <b>Melting Point</b>
+                                    </td>
+                                    <td>
+                                        <b>R-factor</b>
+                                    </td>
+                                    <td>
+                                        <b>Error</b>
+                                    </td>
+                                    <td>
+                                        <b>Color</b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/ss" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/melting_points" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/rfactor" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/error" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/color" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="13">
+                                        <font size="4">
+                                            <b>Crystal</b>
+                                        </font>
+                                    </td>
+                                    <td>
+                                        <b>Space Group</b>
+                                    </td>
+                                    <td>
+                                        <b>Molecular Weight</b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/xtlsg" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/xtlmolwt" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="4">
+                                        <b>Crystal Data</b>
+                                    </td>
+                                    <td>
+                                        <b>a</b>
+                                    </td>
+                                    <td>
+                                        <b>b</b>
+                                    </td>
+                                    <td>
+                                        <b>c</b>
+                                    </td>
+                                    <td>
+                                        <b>α</b>
+                                    </td>
+                                    <td>
+                                        <b>β</b>
+                                    </td>
+                                    <td>
+                                        <b>γ</b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/xtla" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/xtlb" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/xtlc" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/xtlal" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/xtlbe" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/xtlga" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Volume</b>
+                                    </td>
+                                    <td>
+                                        <b>Z</b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/xtlvol" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/xtlz" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">
+                                        <b>Crystal Data Axial Ratio</b>
+                                    </td>
+                                    <td>
+                                        <b>c/a</b>
+                                    </td>
+                                    <td>
+                                        <b>a/b</b>
+                                    </td>
+                                    <td>
+                                        <b>c/b</b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/xtlcovera" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/xtlaoverb" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/xtlcoverb" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="5">
+                                        <b>Reduced Cell</b>
+                                    </td>
+                                    <td>
+                                        <b>a</b>
+                                    </td>
+                                    <td>
+                                        <b>b</b>
+                                    </td>
+                                    <td>
+                                        <b>c</b>
+                                    </td>
+                                    <td>
+                                        <b>α</b>
+                                    </td>
+                                    <td>
+                                        <b>β</b>
+                                    </td>
+                                    <td>
+                                        <b>γ</b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/redcell_a" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/redcell_b" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/redcell_c" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/redcell_al" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/redcell_be" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/redcell_ga" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Volume</b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/redcellvol" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6">
+                                        <table border="1">
+                                            <tr bgcolor="#9acd32">
+                                                <td>
+                                                    <xsl:value-of select="pdf_data/metric_symmetry_warning" />
+                                                </td>
+                                            </tr>
+                                            <xsl:for-each select="pdf_data/metric_symmetry_warning_comments/metric_symmetry_warning_comment_group">
+                                                <tr>
+                                                    <td>
+                                                        <xsl:value-of select="metric_symmetry_warning_comment" />
+                                                    </td>
+                                                </tr>
+                                            </xsl:for-each>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">
+                                        <font size="4">
+                                            <b>Optical</b>
+                                        </font>
+                                    </td>
+                                    <td>
+                                        <b>εα</b>
+                                    </td>
+                                    <td>
+                                        <b>πωβ</b>
+                                    </td>
+                                    <td>
+                                        <b>εγ</b>
+                                    </td>
+                                    <td>
+                                        <b>Sign</b>
+                                    </td>
+                                    <td>
+                                        <b>2V</b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/optical_data_alpha" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/optical_data_beta" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/optical_data_gamma" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/optical_data_sign" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/optical_data_2v" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="14">
+                                        <font size="4">
+                                            <b>Structure</b>
+                                        </font>
+                                    </td>
+                                    <td colspan="7">
+                                        <xsl:value-of select="pdf_data/structure_info" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>ADP Type</b>
+                                    </td>
+                                    <td colspan="6">
+                                        <xsl:value-of select="pdf_data/tf_type" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Origin</b>
+                                    </td>
+                                    <td colspan="6">
+                                        <xsl:value-of select="pdf_data/origin" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>SG Symmetry Operators</b>
+                                    </td>
+                                    <td colspan="6">
+                                        <table border="1">
+                                            <tr bgcolor="#9acd32">
+                                                <td>Seq</td>
+                                                <td>Operator</td>
+                                            </tr>
+                                            <xsl:for-each select="pdf_data/sg_sym_ops/sg_sym_op">
+                                                <tr>
+                                                    <td>
+                                                        <xsl:value-of select="seq" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="operator" />
+                                                    </td>
+                                                </tr>
+                                            </xsl:for-each>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>SG Symmetry Operators (Modulated Structure)</b>
+                                    </td>
+                                    <td colspan="6">
+                                        <table border="1">
+                                            <tr bgcolor="#9acd32">
+                                                <td>Seq</td>
+                                                <td>Operator</td>
+                                            </tr>
+                                            <xsl:for-each select="pdf_data/sg_sym_ops_mod/sg_sym_op">
+                                                <tr>
+                                                    <td>
+                                                        <xsl:value-of select="seq" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="operator" />
+                                                    </td>
+                                                </tr>
+                                            </xsl:for-each>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Atomic Coordinates</b>
+                                    </td>
+                                    <td colspan="6">
+                                        <table border="1">
+                                            <tr bgcolor="#9acd32">
+                                                <td>Atom</td>
+                                                <td>Num</td>
+                                                <td>Wyckoff</td>
+                                                <td>Symmetry</td>
+                                                <td>x</td>
+                                                <td>y</td>
+                                                <td>z</td>
+                                                <td>SOF</td>
+                                                <td>
+                                                    <xsl:value-of select="pdf_data/idp_column" />
+                                                </td>
+                                                <td>AET</td>
+                                            </tr>
+                                            <xsl:for-each select="pdf_data/atomic_coords/atomic_coord">
+                                                <tr>
+                                                    <td>
+                                                        <xsl:value-of select="atom" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="num" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="wyckoff" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="symmetry" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="x" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="y" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="z" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="sof" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="idp" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="aet" />
+                                                    </td>
+                                                </tr>
+                                            </xsl:for-each>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Atomic Coordinates (Modulated)</b>
+                                    </td>
+                                    <td colspan="6">
+                                        <table border="1">
+                                            <tr bgcolor="#9acd32">
+                                                <td>Atom</td>
+                                                <td>Num</td>
+                                                <td>Wyckoff</td>
+                                                <td>x</td>
+                                                <td>y</td>
+                                                <td>z</td>
+                                                <td>SOF</td>
+                                                <td>
+                                                    <xsl:value-of select="pdf_data/idp_column" />
+                                                </td>
+                                                <td>Subsys</td>
+                                            </tr>
+                                            <xsl:for-each select="pdf_data/atomic_coords_mod/atomic_coord">
+                                                <tr>
+                                                    <td>
+                                                        <xsl:value-of select="atom" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="num" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="wyckoff" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="x" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="y" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="z" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="sof" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="idp" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="subsys_id" />
+                                                    </td>
+                                                </tr>
+                                            </xsl:for-each>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Anisotropic Displacement Parameters</b>
+                                    </td>
+                                    <td colspan="6">
+                                        <table border="1">
+                                            <tr bgcolor="#9acd32">
+                                                <td>Atom</td>
+                                                <td>Num</td>
+                                                <td>
+                                                    <xsl:value-of select="pdf_data/adp_column" />
+                                                    11
+                                                </td>
+                                                <td>
+                                                    <xsl:value-of select="pdf_data/adp_column" />
+                                                    22
+                                                </td>
+                                                <td>
+                                                    <xsl:value-of select="pdf_data/adp_column" />
+                                                    33
+                                                </td>
+                                                <td>
+                                                    <xsl:value-of select="pdf_data/adp_column" />
+                                                    12
+                                                </td>
+                                                <td>
+                                                    <xsl:value-of select="pdf_data/adp_column" />
+                                                    13
+                                                </td>
+                                                <td>
+                                                    <xsl:value-of select="pdf_data/adp_column" />
+                                                    23
+                                                </td>
+                                            </tr>
+                                            <xsl:for-each select="pdf_data/ani_temp_facs/ani_temp_fac">
+                                                <tr>
+                                                    <td>
+                                                        <xsl:value-of select="atom" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="num" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="adp11" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="adp22" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="adp33" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="adp12" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="adp13" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="adp23" />
+                                                    </td>
+                                                </tr>
+                                            </xsl:for-each>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Anisotropic Displacement Parameters (Modulated)</b>
+                                    </td>
+                                    <td colspan="6">
+                                        <table border="1">
+                                            <tr bgcolor="#9acd32">
+                                                <td>Atom</td>
+                                                <td>Num</td>
+                                                <td>
+                                                    <xsl:value-of select="pdf_data/adp_column" />
+                                                    11
+                                                </td>
+                                                <td>
+                                                    <xsl:value-of select="pdf_data/adp_column" />
+                                                    22
+                                                </td>
+                                                <td>
+                                                    <xsl:value-of select="pdf_data/adp_column" />
+                                                    33
+                                                </td>
+                                                <td>
+                                                    <xsl:value-of select="pdf_data/adp_column" />
+                                                    12
+                                                </td>
+                                                <td>
+                                                    <xsl:value-of select="pdf_data/adp_column" />
+                                                    13
+                                                </td>
+                                                <td>
+                                                    <xsl:value-of select="pdf_data/adp_column" />
+                                                    23
+                                                </td>
+                                            </tr>
+                                            <xsl:for-each select="pdf_data/ani_temp_facs_mod/ani_temp_fac">
+                                                <tr>
+                                                    <td>
+                                                        <xsl:value-of select="atom" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="num" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="adp11" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="adp22" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="adp33" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="adp12" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="adp13" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="adp23" />
+                                                    </td>
+                                                </tr>
+                                            </xsl:for-each>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Crystal (Symmetry Allowed)</b>
+                                    </td>
+                                    <td colspan="6">
+                                        <xsl:value-of select="pdf_data/crystal_properties" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>AC Space Group</b>
+                                    </td>
+                                    <td colspan="6">
+                                        <xsl:value-of select="pdf_data/ac_space_group" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>AC Superspace Group</b>
+                                    </td>
+                                    <td colspan="6">
+                                        <xsl:value-of select="pdf_data/ac_superspace_group" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">
+                                        <b>AC Unit Cell</b>
+                                    </td>
+                                    <td>
+                                        <b>a</b>
+                                    </td>
+                                    <td>
+                                        <b>b</b>
+                                    </td>
+                                    <td>
+                                        <b>c</b>
+                                    </td>
+                                    <td>
+                                        <b>α</b>
+                                    </td>
+                                    <td>
+                                        <b>β</b>
+                                    </td>
+                                    <td>
+                                        <b>γ</b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/ac_unit_cell_a" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/ac_unit_cell_b" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/ac_unit_cell_c" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/ac_unit_cell_alpha" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/ac_unit_cell_beta" />
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="pdf_data/ac_unit_cell_gamma" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="5">
+                                        <font size="4">
+                                            <b>Modulated</b>
+                                        </font>
+                                    </td>			
+                                    <td>
+                                        <b>Positional Displacement Parameters</b>
+                                    </td>
+                                    <td colspan="6">
+                                        <table border="1">
+                                            <tr bgcolor="#9acd32">
+                                                <td>Atom Site</td>
+                                                <td>Axis</td>
+                                                <td>WV ID</td>
+                                                <td>Cos</td>
+                                                <td>Sin</td>
+                                            </tr>
+                                            <xsl:for-each select="pdf_data/positional_displacement_params/positional_displacement_param">
+                                                <tr>
+                                                    <td>
+                                                        <xsl:value-of select="atom_site" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="axis" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="wv_id" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="cos" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="sin" />
+                                                    </td>
+                                                </tr>
+                                            </xsl:for-each>
+                                        </table>
+                                    </td>																							
+                                </tr>		
+                                <tr>
+                                    <td>
+                                        <b>Atomic Displacement Parameters</b>
+                                    </td>
+                                    <td colspan="6">
+                                        <table border="1">
+                                            <tr bgcolor="#9acd32">
+                                                <td>Atom Site</td>
+                                                <td>WV ID</td>
+                                                <td>Cos</td>
+                                                <td>Sin</td>
+                                                <td>Tensor El.</td>
+                                            </tr>
+                                            <xsl:for-each select="pdf_data/atomic_displacement_params/atomic_displacement_param">
+                                                <tr>
+                                                    <td>
+                                                        <xsl:value-of select="atom_site" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="wv_id" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="cos" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="sin" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="tensor_element" />
+                                                    </td>
+                                                </tr>
+                                            </xsl:for-each>
+                                        </table>
+                                    </td>
+                                </tr>					
+                                <tr>
+                                    <td>
+                                        <b>Occupation Modulation</b>
+                                    </td>
+                                    <td colspan="6">
+                                        <table border="1">
+                                            <tr bgcolor="#9acd32">
+                                                <td>Atom Site</td>
+                                                <td>WV ID</td>
+                                                <td>Cos</td>
+                                                <td>Sin</td>
+                                            </tr>
+                                            <xsl:for-each select="pdf_data/occupation_modulations/occupation_modulation">
+                                                <tr>
+                                                    <td>
+                                                        <xsl:value-of select="atom_site" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="wv_id" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="cos" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="sin" />
+                                                    </td>
+                                                </tr>
+                                            </xsl:for-each>
+                                        </table>
+                                    </td>
+                                </tr>					
+                                <tr>
+                                    <td>
+                                        <b>Occupational - Crenel</b>
+                                    </td>
+                                    <td colspan="6">
+                                        <table border="1">
+                                            <tr bgcolor="#9acd32">
+                                                <td>Atom Site</td>
+                                                <td>C</td>
+                                                <td>W</td>
+                                            </tr>
+                                            <xsl:for-each select="pdf_data/crenel_functions/crenel_function">
+                                                <tr>
+                                                    <td>
+                                                        <xsl:value-of select="atom_site" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="crenel_c" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="crenel_w" />
+                                                    </td>
+                                                </tr>
+                                            </xsl:for-each>
+                                        </table>
+                                    </td>
+                                </tr>					
+                                <tr>
+                                    <td>
+                                        <b>Displacement - SawTooth</b>
+                                    </td>
+                                    <td colspan="6">
+                                        <table border="1">
+                                            <tr bgcolor="#9acd32">
+                                                <td>Atom Site</td>
+                                                <td>C</td>
+                                                <td>W</td>
+                                                <td>AX</td>
+                                                <td>AY</td>
+                                                <td>AZ</td>
+                                            </tr>
+                                            <xsl:for-each select="pdf_data/sawtooth_functions/sawtooth_function">
+                                                <tr>
+                                                    <td>
+                                                        <xsl:value-of select="atom_site" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="sawtooth_c" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="sawtooth_w" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="ax" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="ay" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="az" />
+                                                    </td>
+                                                </tr>
+                                            </xsl:for-each>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="13">
+                                        <font size="4">
+                                            <b>Classifications</b>
+                                        </font>
+                                    </td>
+                                    <td>
+                                        <b>Subfiles</b>
+                                    </td>
+                                    <td colspan="6">
+                                        <xsl:value-of select="pdf_data/subfile_indicator" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Mineral Classification</b>
+                                    </td>
+                                    <td colspan="6">
+                                        <xsl:value-of select="pdf_data/pdf_minclass" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>IMA Mineral Classification</b>
+                                    </td>
+                                    <td colspan="6">
+                                        <xsl:value-of select="pdf_data/ima_minclass" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Strunz-mindat Classification</b>
+                                    </td>
+                                    <td colspan="6">
+                                        <xsl:value-of select="pdf_data/strunz_class" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Zeolite Classification</b>
+                                    </td>
+                                    <td colspan="6">
+                                        <xsl:value-of select="pdf_data/pdf_zeoclass" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Pearson Symbol</b>
+                                    </td>
+                                    <td colspan="6">
+                                        <xsl:value-of select="pdf_data/pearson" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Pearson Symbol (w/o H)</b>
+                                    </td>
+                                    <td colspan="6">
+                                        <xsl:value-of select="pdf_data/pearson_without_h" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Prototype Structure</b>
+                                    </td>
+                                    <td colspan="6">
+                                        <xsl:value-of select="pdf_data/rep_struc" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Prototype Structure (Alpha Sort)</b>
+                                    </td>
+                                    <td colspan="6">
+                                        <xsl:value-of select="pdf_data/rep_struc_alpha_sort" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>LPF Prototype Structure</b>
+                                    </td>
+                                    <td colspan="6">
+                                        <xsl:value-of select="pdf_data/lpf_rep_struc" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>LPF Prototype Structure (Alpha Sort)</b>
+                                    </td>
+                                    <td colspan="6">
+                                        <xsl:value-of select="pdf_data/lpf_rep_struc_alpha_sort" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>ANX</b>
+                                    </td>
+                                    <td colspan="6">
+                                        <xsl:value-of select="pdf_data/anx" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Wyckoff Sequence</b>
+                                    </td>
+                                    <td colspan="6">
+                                        <xsl:value-of select="pdf_data/wyckoff_sequence" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">
+                                        <font size="4">
+                                            <b>Cross-references</b>
+                                        </font>
+                                    </td>
+                                    <td>
+                                        <b>Cross-references</b>
+                                    </td>
+                                    <td colspan="6">
+                                        <xsl:value-of select="pdf_data/cross_ref_pdf_numbers" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Former PDF Numbers</b>
+                                    </td>
+                                    <td colspan="6">
+                                        <xsl:value-of select="pdf_data/former_pdf_number" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <font size="4">
+                                            <b>References</b>
+                                        </font>
+                                    </td>
+                                    <td colspan="6">
+                                        <table border="1">
+                                            <tr bgcolor="#9acd32">
+                                                <td>Type</td>
+                                                <td>DOI</td>
+                                                <td>Reference</td>
+                                            </tr>
+                                            <xsl:for-each select="pdf_data/references/reference_group">
+                                                <tr>
+                                                    <td>
+                                                        <xsl:value-of select="type" />
+                                                    </td>
+                                                    <td>
+                                                        <xsl:element name="a">
+                                                            <xsl:attribute name="href">
+                                                                <xsl:text>http://dx.doi.org/</xsl:text>
+                                                                <xsl:value-of select="doi" />
+                                                            </xsl:attribute>
+                                                            <xsl:value-of select="doi" />
+                                                        </xsl:element>
+                                                    </td>
+                                                    <td>
+                                                        <xsl:value-of select="reference" />
+                                                    </td>
+                                                </tr>
+                                            </xsl:for-each>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="3">
+                                        <font size="4">
+                                            <b>Comments</b>
+                                        </font>
+                                    </td>
+                                    <td>
+                                        <b>Database Comments</b>
+                                    </td>
+                                    <td colspan="6">
+                                        <xsl:value-of select="pdf_data/database_comments" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>User Comments</b>
+                                    </td>
+                                    <td colspan="6">
+                                        <xsl:value-of select="pdf_data/user_comments" />
+                                    </td>
+                                </tr>
+                            </table>
+                            <table border="0">
+                                <tr>
+                                    <td align="center">
+                                        <h2>Diffraction Pattern</h2>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        <xsl:value-of select="graphs/wave_length" />
+                                    </td>
+                                </tr>
+                            </table>
+                            <center>
+                                <img>
+                                    <xsl:attribute name="src">
+                                        <xsl:text>data:image/png;base64,</xsl:text>
+                                        <xsl:value-of select="graphs/chart_image"/>
+                                    </xsl:attribute>
+                                    <xsl:attribute name="width">
+                                        <xsl:value-of select="graphs/chart_image/width"/>
+                                    </xsl:attribute>
+                                    <xsl:attribute name="height">
+                                        <xsl:value-of select="graphs/chart_image/height"/>
+                                    </xsl:attribute>
+                                </img>
+                            </center>
+                            <xsl:for-each select="graphs/stick_series">
+                                <h2>
+                                    <xsl:value-of select="@type" />
+                                </h2>
+                                <table border="1">
+                                    <tr bgcolor="#9acd32">
+                                        <td>2θ (°)</td>
+                                        <td>TOF (µs)</td>
+                                        <td>d (Å)</td>
+                                        <td>I (%)</td>
+                                        <td>h</td>
+                                        <td>k</td>
+                                        <td>l</td>
+                                        <td>m</td>
+                                        <td>n</td>
+                                        <td>o</td>
+                                        <td>*</td>
+                                    </tr>
+                                    <xsl:for-each select="intensity">
+                                        <tr>
+                                            <td>
+                                                <xsl:value-of select="theta" />
+                                            </td>
+                                            <td>
+                                                <xsl:value-of select="tof" />
+                                            </td>
+                                            <td>
+                                                <xsl:value-of select="da" />
+                                            </td>
+                                            <td>
+                                                <xsl:value-of select="intensity" />
+                                            </td>
+                                            <td>
+                                                <xsl:value-of select="h" />
+                                            </td>
+                                            <td>
+                                                <xsl:value-of select="k" />
+                                            </td>
+                                            <td>
+                                                <xsl:value-of select="l" />
+                                            </td>
+                                            <td>
+                                                <xsl:value-of select="M1" />
+                                            </td>
+                                            <td>
+                                                <xsl:value-of select="M2" />
+                                            </td>
+                                            <td>
+                                                <xsl:value-of select="M3" />
+                                            </td>
+                                            <td>
+                                                <sup>
+                                                    <xsl:value-of select="F" />
+                                                </sup>
+                                            </td>
+                                        </tr>
+                                    </xsl:for-each>
+                                </table>
+                            </xsl:for-each>
+                            <copy_right>© 2025 International Centre for Diffraction Data. All Rights Reserved</copy_right>
+                        </td>
+                    </tr>
+                </table>
+            </body>
+        </html>
+    </xsl:template>
+</xsl:stylesheet>
+</pdfcard>

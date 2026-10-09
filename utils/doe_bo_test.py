@@ -1,7 +1,7 @@
 """End-to-end initializer benchmark: Sobol + BO vs LHS+SA + BO.
 
 Shared machinery for the sampler-comparison test notebooks
-(``analysis/doe/sampler_bo_1d_test.ipynb``): a mixed test problem with **one
+(``doe/pdo/sampler_bo_1d_test.ipynb``): a mixed test problem with **one
 continuous input and one 2-level categorical input** (mimicking Ox Press), the
 same sampler code as the DoE study notebooks, and a single-objective BO loop
 built on the campaign's own GP (:func:`utils.mobo.fit_gp`) so the *only*
@@ -182,7 +182,7 @@ def regret_matrix(runs):
 # =========================================================================== #
 # Higher-dimensional campaign benchmark: sliced Hartmann-6
 # (5 continuous inputs + 1 two-level categorical), with optional mid-campaign
-# space-filling batches — used by analysis/doe/sampler_bo_hd_batches_test.ipynb
+# space-filling batches — used by doe/pdo/sampler_bo_hd_batches_test.ipynb
 # =========================================================================== #
 _H6_ALPHA = np.array([1.0, 1.2, 3.0, 3.2])
 _H6_A = np.array([[10.0, 3.0, 17.0, 3.5, 1.7, 8.0],
@@ -319,7 +319,7 @@ def run_campaign_benchmark(strategies, n_seeds=10, verbose=True, **kw):
 
 # =========================================================================== #
 # Generalized multi-problem campaign benchmark (3 sliced mixed-input problems)
-# used by analysis/doe/sampler_bo_hd_batches_test.ipynb
+# used by doe/pdo/sampler_bo_hd_batches_test.ipynb
 # =========================================================================== #
 _SHEKEL_BETA = 0.1 * np.array([1, 2, 2, 4, 4, 6, 3, 7, 5, 5])
 _SHEKEL_C = np.array([[4.0, 1.0, 8.0, 6.0, 3.0, 2.0, 5.0, 8.0, 6.0, 7.0],

@@ -1,7 +1,7 @@
 """Worker: run one (problem, strategy) arm of the campaign benchmark and cache it.
 
 The 3-problem x 4-arm x N-seed benchmark in
-``analysis/doe/sampler_bo_hd_batches_test.ipynb`` is embarrassingly parallel, so
+``doe/pdo/sampler_bo_hd_batches_test.ipynb`` is embarrassingly parallel, so
 on a cluster the arms are precomputed by parallel workers:
 
     python -m utils.run_doe_bo_arm <problem> <strategy> [n_seeds]
@@ -12,7 +12,7 @@ e.g. launch all 12 arms with xargs (from the repo root):
       for s in sobol_bo lhs_sa_bo sobol_bo_batch lhs_sa_bo_batch; do echo "$p $s"; done
     done | OMP_NUM_THREADS=2 xargs -P 12 -n 2 python -m utils.run_doe_bo_arm
 
-Results go to ``output/sampler_bo_1d_test/campaign_cache/<problem>__<strategy>.pkl``.
+Results go to ``output/pdo/sampler_bo_1d_test/campaign_cache/<problem>__<strategy>.pkl``.
 ``run_campaign_p`` is deterministic per (problem, strategy, seed), so cached and
 inline-computed results are identical — the notebook loads the cache when present.
 """

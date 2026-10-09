@@ -1,0 +1,139 @@
+Uh I mean yeah everyone like a uh like a individually I mean they are they are not they are not linked to each other they kind of yeah separated and we can treat it as a category I mean there's like the the one you're showing here is like uh it's actually deposited on amus alum oxide and the oxide is on top of sapphire and yeah and the second one is half is half oxide but hydroxide is on top of silica and the third one now I'm doing is titanium oxide and titanium is also on top of sika. Yeah. And Well, I think if if our oitation time is long, then having sapphire and having Cash should not matter. But if the oxidation oxidation time is short, then it will matter because like the the sapphire is transparent to the IRA that I'm using to heat up the the sample and see is not. So see the temperature on will raise will raise uh more quickly than the Sapphire. So, but like uh I I think I'll be using uh Scon more in the future. So, I I probably not use Sapphire anymore. Yeah. Yeah. Uh well no I don't we don't have alum aluminum one and you know sapphire is aluminum outside right and so the the 
+
+so yeah the the structure is like this. So when we see uh substrate actually We have a like a relatively thick about 0.5 mm like a um like a base substrate then gua deposit a thin layer I think it's like 10 around 10 nanometer 
+
+yeah 10 to 20 
+
+yeah 10 yeah a relatively thin layer on top of on top of this big base substrate so the structure is like this we first tried using a sappire as a base substrate then we deposit a aluminum on top of it. This is uh yeah this is uh we this is for the very early um experiment. Then we switched to uh silicon. Right. 
+
+Yes. 
+
+And then we deposit hnia oxide on silicon and this time uh gua deposit tazanium oxide on top of silica. So correct me correct me uh if uh the the structure is uh I'm I'm not quite sure about structure. Do you have any other layers in between? 
+
+Uh for see substrate there's a see outside layer beneath in between. So beneath the half outside and see and 
+
+okay so it's half what what's the thickness of a half? 
+
+Half is 5 nanometer and see asai is uh between 100 nanometer and 120\. 5 nome hymn oxide 120 nanometer SO2 and then it's like a very thick base uh substrate 
+
+which is cap 
+
+yeah it's a 500 micron uh 500 mm right 
+
+yeah Uh do you think the normalization for thickness is accurate? Because like I I also uh saw some paper that talking about this simple formula will work for a thin film but I'm not I'm not very sure. So do you think it do you think it works? Okay. Yeah. Okay. Yeah, I'm thinking about uh how can I get 100% crystal crystal film and Honestly, I'm not quite sure. Okay. There's some I can give you reference reference data but reference is uh reference data is on on nothing actually because it's is uh XRD data from powder. So you will you will not see substrate. Would that work? Yes. Okay. I I need to grab it from another lab. So, you'll take me like one, two days the next time I go there. Yeah. Okay. Okay. Well, I I don't think I don't know much about the noise, but the thicker film have higher crystal crystality makes sense to me. And which which batch do you use as the 100% crystality? Okay, I see. Uh, I mean either or. I I I I don't have a preference. Okay. Yeah. Mhm. Yes. Mhm. Well, can you say again? Yeah. We'll use like 400° deposit 42 425, right? Yes. Yeah. They should be lower, right? Yeah. Well, yeah, let me think about it. But like is lower deposition uh temperature means lower codality is about to be ready. Yeah. Yeah. I think I think the the trend here the lower deposition temperature lows means lower crystal crystallinity is about to be expected. It makes sense. But let me think about if we should bring back 25 degree deposition because like 25 degree deposition has a lot higher uh carrier concentration. So I'm not sure if I want to make the tradeoff. Yeah. Uh nothing in middle but we can deposited at uh 450 degree but I'm Not sure that 25° matters. Yeah. Yeah. Okay. Yeah. I I don't think so. Yeah. Yep. Yes. Yeah. Heat. Yeah. What? Well, I think I'm sure I can try them, but from from the from the graph here, I think if we want the lowest lowest car concentration, then number 14 is still better. But if I if I want overall best, then I'll choose number 15\. But if you want to if you have some idea about how uh which parameter says I I should proceed then sure I mean I'm I'm personally also change uh change a lot of things in the background but well I don't have uh I don't have better data to show now for now yeah Yeah. Yeah. You're you're you're asking should we pull the three three three set of data through three sets of sub data together and determine which one which which sub should will be the best. But if you if you want to make the decision then you need me to make a lot of sample. 
+
+Yeah. Mhm. Yeah. I mean, uh there's also a another concern I have. It's not concern but another thought is like because uh the best sample we have currently is uh oxidation at for like 1 minutes, right? And It looks like the the f the longer the the oxidation time then the higher the surface roughness will be. So I'm thinking should we just limit the oxitation time to like something very low like like five minutes and if we actually reduce the time and fraction time then you greatly improve our throughput. So Yeah, just some salt. But I I Yeah, but I need to test if Yeah, maybe you can tell me if you if you think the longer oxidation and longer vacuum time actually is good because from what I from what I see here from the surface surface roughness is not that good. Yeah, if we if we decide to if we decide to reduce the the time then it definitely will be a constraint. But I don't want to just cut it like half hazardly because I I I don't want you to do that that much time and just cut off the good perimeter, right? Yeah. Yeah. Uh if if the if the temperature and the time is different, I I need to do that separately. But yeah, I I mean I can do that. Yeah. Yeah, sure. Yep. Yeah, sure. I mean, I I only understand half half of what you're talking about, but Yeah. Yeah. Good. If you like it, then proceed. I mean I I think it's well is it good? 
+
+Christian how how much data for each category do we have as of now? Like the third one we don't have right now, right? So what is the ratio between or or how many data points do we have? for each of the two. 
+
+Yeah. And 
+
+oh, so we have 23 using the sapphire and five using the silicon. 
+
+Uh I I'll say it's on half now. But yes, because I after a while we noticed that the data the variance of data uh half side fus a lot so we just stop there. 
+
+Um yeah so that is why I want to shift from oxide to titanium oxide because titanium oxide uh provide a much more stable data set. Yeah. Uh yeah. Yeah. Please continue. I think half outside is probably not good. I don't think I can make half work. But on aluminum oxide and on titanium oxide, I think it's possible. Oh. this on the the data gear. I mean I mean this this one should still work because this one is um aluminum outside, right? Yeah. But yeah, but the six data points that we have um have an outside probably not good. Yeah. Yes. And titanium on Zika. 
+
+Oh, hold on. So, we're still having three categories. 
+
+I mean, 
+
+with two base uh substrates and then the structure on the top, we can actually treat it. I mean, it it we have to try. But we if we it it's basically a combination of two, right? 
+
+Not sure 
+
+cuz cuz you said you're using sapphire as the base. 
+
+So let me let me explain this. Uh so the most uh uh critical sub I mean the most critical layer actually is the the touching layer. 
+
+So yeah, we can just uh negate the the the base substrate. We just care about the touch. Yeah, I'll touch him later. 
+
+Okay. Oh, then then it becomes two that you said uh the alum aluminum oxide and then titanium oxide. Is that correct? 
+
+Yes, that's all I think. Yes. 
+
+Okay. So, we have two. 
+
+Uh yeah, because I I don't think I can make half work. But 
+
+yeah, I don't think I want to try it. So, maybe do 
+
+we will first have to see if If the base substrate actually has any impact, 
+
+I think it has impact when the oxidation time is low. 
+
+So like like 1 minute 
+
+and uh in that case the actual temperature the actual temperature that ridge the film ridge on silicon will be a little bit higher than on sapphire because sapphire is transparent and we are using light to heat up the sample. 
+
+So I have this idea because like uh we tried we have tried using the same sample sorry the same parameter to deposit the same film on sapphire and on half and on ste and we see that uh the sample the film on sapphire can withstand temperature till 700° and on see it actually drop to 500\. So I think that's that's the only thing that matters when we change to the sapphire to see is that the assetation time when the asitation assetation time is low then the temperature can withstand actually there's a there's a little difference 
+
+because the the actual temperature that the film actually reach is different. 
+
+Mhm. 
+
+Yeah. 
+
+No. So, cuz if we are no longer using sapphire for the base substrate and always going to use silicon, 
+
+that's no longer a variable. 
+
+Yeah. 
+
+That was what I was saying. 
+
+Yeah. I think we'll just we'll just look at the we'll just look at the surface sample, but I won't I won't make any more uh sample on sapphire we'll just use silica. 
+
+Mhm. 
+
+And so so I'm proposing we have a uh z uh alumite on see and the other sample is titanite on we just have these two 
+
+I think on on our end we still need to figure out how to because there might be some differences 
+
+um that's caused by the base substrate. So we would first need to like sort of calibrate the data a little bit. 
+
+Yeah. 
+
+Um to see if there are changes when we use uh silicon instead of software with the both with the alum aluminum uh oxide. 
+
+Yeah. 
+
+But hopefully there's not much change and and uh we can just use the data as it is. Do 
+
+you think so? Mhm. Okay. Uh-huh. Uh-huh. Uh-huh. No, cuz cuz for instance, if we use OVGP and then uh apply Bijian optimization on top of that and then the Beijian optimization wants us to use to sample more points using sapphire base substrate and then we decided not to then there's a conflict between them. So we should remove that as a variable but sort of make sure that the data set that we previously had previously created using the sapphire still portrays the behavior when we use the silicon. 
+
+Well actually I want to do uh so for the sapphire subject here right I do safar I have I do AODD deposition um for alumi on the sapphire and that's it and actually for the new batch I want to do the LD deposition then I want to do a iron bombment on it to increase increase the adhesion between PD and the and the substrate. So well I would like you I will let you know if I actually did it. But if you want to compare the sapphire uh on software and alumi on uh C then I think I I should not do that. So I'm I I was going to do a extra step before I do the polyide deposition but if you want to if you need to compare the data between sapphire and see then I guess I'll not do that. 
+
+Um okay. because I'm not an expert on that part. Um 
+
+I think we should 
+
+try to do uh as much on what is what you think is best. 
+
+So I I don't think there's value. I mean 
+
+okay in that case I in that case I'll do some comp comparison if 
+
+cuz if you simply create additional experiment data just for the comparison um wouldn't that take away extra time. 
+
+Okay, I see. 
+
+So that's what I'm concerned like it it will be great if we can have like uh sort of a comparison data set but that's that's additional like experiment time. So 
+
+okay in that case I'll just say that uh there there will be a different uh between on cypher andai on see and the difference created by by me adding an extra step before uh doing the plium deposition. So I'm just saying it's meant to be there will be a difference and the difference may not come from uh surf versus senator. Uh I think I'll just blast the the the sample as hard as I can. So there will no there will not be any extra parameter in it. Yeah. Because I I see no reason that you the process will degrade the film quality. At worst it will change nothing and best will be better. that I have not showed you. So because I have I didn't measure them yet. So I think we can just safely discard them. Yeah. You you have you already have everything I have now. Yeah. Mhm. I mean just I mean I think we we just we just uh I mean I think uh we just come up with a new batch of sobo parameter set and we can I think we should start from there because the uh I don't think the The sample I refer now will pro produce any meaningful data. Yeah. Mhm. Okay. Yeah. I mean I mean I mean any number is good honestly. 
+
+I mean I think the Christian is asking because um higher the better for us obviously but what will be feasible for for you 
+
+I mean it just it will just take longer but I don't I don't really have a time limit so I think 23 is good 
+
+yeah we we would typically want to match what we already have so 
+
+yeah I think it's good it's fine 
+
+because like 23 is the max the max maximum amount of sample I can put in the chamber at one time. 
+
+Yeah. So this is why we choose 23\. But if we want if I want I need to do like two batch then I can do two batch. It doesn't matter. Yeah. Yep. And I I actually I think I can send you a reference data to Okay. Uh just in a couple of hours I can do that. Yes. Okay. Then that's it. Question mark. Okay. Okay. Thank you guys. 
+
+Thank you everyone. Bye. 
+
+Have a good day.

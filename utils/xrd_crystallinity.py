@@ -2,7 +2,7 @@
 
 The fab team delivers XRD patterns as an Excel workbook in which every sample
 occupies a *pair* of columns (2theta, intensity) and the sample name sits in the
-header row above the intensity column (see ``raw_data_received/08_27_26``).
+header row above the intensity column (see ``raw_data_received/pdo/08_27_26``).
 This module turns those patterns into per-sample crystallinity numbers and a
 per-condition summary that the campaign notebooks / GP can consume.
 
@@ -22,7 +22,7 @@ Per sample (``analyze_sheet``)
     auc_101          integrated PdO(101) intensity in 33-35 deg above a linear
                      baseline through the flanking windows 31.5-32.5 / 35.5-36.5,
                      negative excess clipped to zero - the campaign objective as
-                     defined in ``analysis/received_data_analysis/pdo_thickness_noise_analysis.ipynb``
+                     defined in ``analysis/pdo/pdo_thickness_noise_analysis.ipynb``
                      (kept for continuity; clipping biases it upward by ~20-25
                      counts*deg at these noise levels).
     auc_101_net      same integral **without** clipping -> unbiased, zero-mean
@@ -39,7 +39,9 @@ Per sample (``analyze_sheet``)
                      The reference is, by default, the mean of the three largest
                      detected areas in the same sheet (``--ref top3``); pin it with
                      ``--ref <value>`` to compare deliveries measured with the same
-                     instrument settings, or ``--ref <sample>``.
+                     instrument settings, or ``--ref <sample>``. ``--ref best_run``
+                     uses the best *condition* instead: the largest mean area over
+                     the replicate films of one design run (``--ref run9`` pins run 9).
     crystallinity_pct_thk
                      same index after dividing the area by the *final* film
                      thickness (deposited thickness x 5/3 Pd->PdO expansion, or a
@@ -72,9 +74,9 @@ Usage
 Command line (run from the repository root)::
 
     python utils/xrd_crystallinity.py \
-        --xlsx raw_data_received/08_27_26/PdO_data_0827.xlsx --sheet sobol \
-        --run-table Processed_data_inputs/experiment02/raw_data_update_05_22_2026.xlsx \
-        --out-dir output/experiment02_xrd_crystallinity
+        --xlsx raw_data_received/pdo/08_27_26/PdO_data_0827.xlsx --sheet sobol \
+        --run-table Processed_data_inputs/pdo/experiment02/raw_data_update_05_22_2026.xlsx \
+        --out-dir output/pdo/experiment02_xrd_crystallinity
 
 or from a notebook::
 
@@ -408,8 +410,11 @@ def attach_run_table(df: pd.DataFrame, run_table: str, expansion: float = 5.0 / 
     return out
 
 
-def _reference_value(values: pd.Series, detected: pd.Series, names: pd.Series, ref) -> float:
-    """Resolve ``ref`` (``'max'``, ``'topN'``, a sample name or a number) to a number."""
+def _reference_value(values: pd.Series, detected: pd.Series, names: pd.Series, ref,
+                     runs: Optional[pd.Series] = None) -> float:
+    """Resolve ``ref`` (``'max'``, ``'topN'``, ``'best_run'``, ``'run<N>'``, a sample
+    name or a number) to a number. The run-based specs need ``runs`` (design run per
+    film) and average every replicate film of the run, detected or not."""
     if isinstance(ref, (int, float)) and not isinstance(ref, bool):
         return float(ref)
     ref = str(ref)
@@ -419,6 +424,14 @@ def _reference_value(values: pd.Series, detected: pd.Series, names: pd.Series, r
         pass
     if ref in set(names):
         return float(values[names == ref].iloc[0])
+    m = re.match(r"run(\d+)$", ref)
+    if ref == "best_run" or m:
+        if runs is None or runs.isna().all():
+            raise ValueError(f"reference {ref!r} needs a 'run' column (RR_NN sample names)")
+        means = values.groupby(runs).mean()
+        if m:
+            return float(means.loc[float(m.group(1))])
+        return float(means.max())
     pool = values[detected] if detected.any() else values
     pool = pool.sort_values(ascending=False)
     if ref == "max":
@@ -434,8 +447,9 @@ def add_crystallinity(df: pd.DataFrame, ref="top3", area_col: str = "auc_101_net
                       group_col: Optional[str] = "sheet", ref_per_nm=None) -> Tuple[pd.DataFrame, pd.DataFrame]:
     """Add ``crystallinity_pct`` and ``crystallinity_pct_thk`` (when thickness is known).
 
-    ``ref`` fixes the area that counts as 100 % (``'max'``, ``'topN'``, a sample
-    name or a number); ``ref_per_nm`` does the same for the thickness-normalised
+    ``ref`` fixes the area that counts as 100 % (``'max'``, ``'topN'``,
+    ``'best_run'`` = highest mean over the replicates of one run, ``'run<N>'``, a
+    sample name or a number); ``ref_per_nm`` does the same for the thickness-normalised
     index (a number, or None -> same spec as ``ref`` when that is not numeric,
     else ``'top3'``). Returns the enriched frame and a small table of the
     reference values used per group (write it next to the results - the index
@@ -458,7 +472,8 @@ def add_crystallinity(df: pd.DataFrame, ref="top3", area_col: str = "auc_101_net
             refs.append(dict(group=g, area_col=area_col, ref_spec=str(ref), ref_area=np.nan,
                              ref_area_per_nm=np.nan))
             continue
-        r_area = _reference_value(sub[area_col], sub["peak_detected"], sub["sample"], ref)
+        runs = sub["run"] if "run" in sub.columns else None
+        r_area = _reference_value(sub[area_col], sub["peak_detected"], sub["sample"], ref, runs)
         out.loc[idx, "crystallinity_pct"] = 100.0 * sub[area_col].clip(lower=0) / r_area
         r_pnm = np.nan
         if has_t:
@@ -469,7 +484,8 @@ def add_crystallinity(df: pd.DataFrame, ref="top3", area_col: str = "auc_101_net
                 else:  # a numeric --ref pins the *area*; the per-nm reference then follows top3
                     spec = ref if not _is_number(ref) else "top3"
                 r_pnm = _reference_value(sub.loc[ok, "area_per_nm"], sub.loc[ok, "peak_detected"],
-                                         sub.loc[ok, "sample"], spec)
+                                         sub.loc[ok, "sample"], spec,
+                                         None if runs is None else runs[ok])
                 thk = 100.0 * sub["area_per_nm"].clip(lower=0) / r_pnm
                 out.loc[idx, "crystallinity_pct_thk"] = thk.where(sub["peak_detected"])
         refs.append(dict(group=g, area_col=area_col, ref_spec=str(ref), ref_area=r_area,
@@ -563,8 +579,12 @@ def _series_color(df: pd.DataFrame) -> Tuple[pd.Series, Dict[str, str]]:
     return pd.Series(PALETTE["series"][0], index=df.index), {"samples": PALETTE["series"][0]}
 
 
-def plot_fits(df: pd.DataFrame, out_png: str, cfg: Mapping = DEFAULT_CFG, ncols: int = 6) -> None:
-    """One small panel per sample: corrected data, fitted baseline + Gaussian."""
+def plot_fits(df: pd.DataFrame, out_png: Optional[str] = None, cfg: Mapping = DEFAULT_CFG, ncols: int = 6):
+    """One small panel per sample: corrected data, fitted baseline + Gaussian.
+
+    Returns the figure; writes it to ``out_png`` only when a path is given (the
+    caller closes it - the CLI does, a notebook shows it inline).
+    """
     import matplotlib.pyplot as plt
     _style()
     pats = df.attrs.get("patterns", {})
@@ -611,12 +631,19 @@ def plot_fits(df: pd.DataFrame, out_png: str, cfg: Mapping = DEFAULT_CFG, ncols:
                  "(solid = detected, dashed = below SNR threshold); shaded = 33-35° objective window",
                  x=0.01, ha="left", fontsize=9, color=PALETTE["ink2"])
     fig.tight_layout(rect=(0, 0, 1, 0.985))
-    fig.savefig(out_png, dpi=170, bbox_inches="tight")
-    plt.close(fig)
+    if out_png:
+        fig.savefig(out_png, dpi=170, bbox_inches="tight")
+    return fig
 
 
-def plot_by_run(df: pd.DataFrame, out_png: str, ycol: str = "crystallinity_pct") -> None:
-    """Replicates as dots per design condition, ordered by Dep Temp then thickness."""
+def plot_by_run(df: pd.DataFrame, out_png: Optional[str] = None, ycol: str = "crystallinity_pct",
+                show_detection: bool = True):
+    """Replicates as dots per design condition, ordered by Dep Temp then thickness.
+
+    ``show_detection=False`` draws every film as a filled dot and drops the
+    detection entry from the legend (presentation version). Returns the figure
+    (None when the needed columns are missing); saves only when ``out_png`` is given.
+    """
     import matplotlib.pyplot as plt
     _style()
     if "run" not in df.columns or ycol not in df.columns:
@@ -633,7 +660,7 @@ def plot_by_run(df: pd.DataFrame, out_png: str, ycol: str = "crystallinity_pct")
     rng = np.random.default_rng(0)
     for idx, r in d.iterrows():
         x = xpos[r["cond"]] + rng.uniform(-0.12, 0.12)
-        det = bool(r["peak_detected"])
+        det = bool(r["peak_detected"]) or not show_detection
         ax.scatter(x, r[ycol], s=34, color=colors[idx] if det else "none",
                    edgecolor=colors[idx], linewidth=1.2, zorder=3)
     means = d.groupby("cond")[ycol].mean()
@@ -652,19 +679,26 @@ def plot_by_run(df: pd.DataFrame, out_png: str, ycol: str = "crystallinity_pct")
     ax.grid(axis="x", visible=False)
     from matplotlib.lines import Line2D
     handles = [Line2D([], [], marker="o", ls="", color=c, label=k) for k, c in cmap.items()]
-    handles += [Line2D([], [], marker="o", ls="", markerfacecolor="none", color=PALETTE["ink2"],
-                       label="PdO(101) not detected (SNR < threshold)"),
-                Line2D([], [], color=PALETTE["ink2"], lw=1.4, label="condition mean")]
+    if show_detection:
+        handles.append(Line2D([], [], marker="o", ls="", markerfacecolor="none", color=PALETTE["ink2"],
+                              label="PdO(101) not detected (SNR < threshold)"))
+    handles.append(Line2D([], [], color=PALETTE["ink2"], lw=1.4, label="condition mean"))
     ax.legend(handles=handles, loc="upper center", bbox_to_anchor=(0.5, -0.2), ncol=4,
               handletextpad=0.4, columnspacing=1.2)
     ax.set_title(TITLE.get(ycol, ycol), loc="left", color=PALETTE["ink2"])
     fig.tight_layout()
-    fig.savefig(out_png, dpi=170, bbox_inches="tight")
-    plt.close(fig)
+    if out_png:
+        fig.savefig(out_png, dpi=170, bbox_inches="tight")
+    return fig
 
 
-def plot_vs_thickness(df: pd.DataFrame, out_png: str, ycol: str = "crystallinity_pct") -> None:
-    """Crystallinity index against final film thickness, coloured by deposition temperature."""
+def plot_vs_thickness(df: pd.DataFrame, out_png: Optional[str] = None, ycol: str = "crystallinity_pct",
+                      show_detection: bool = True):
+    """Crystallinity index against final film thickness, coloured by deposition temperature.
+
+    ``show_detection=False`` draws every film as a filled dot (presentation version).
+    Returns the figure (None when the needed columns are missing); saves only when ``out_png`` is given.
+    """
     import matplotlib.pyplot as plt
     _style()
     if "thickness_final_nm" not in df.columns or ycol not in df.columns:
@@ -675,7 +709,7 @@ def plot_vs_thickness(df: pd.DataFrame, out_png: str, ycol: str = "crystallinity
     colors, cmap = _series_color(d)
     fig, ax = plt.subplots(figsize=(6.8, 4.4))
     for idx, r in d.iterrows():
-        det = bool(r["peak_detected"])
+        det = bool(r["peak_detected"]) or not show_detection
         ax.scatter(r["thickness_final_nm"], r[ycol], s=36, color=colors[idx] if det else "none",
                    edgecolor=colors[idx], linewidth=1.2, zorder=3)
     if "run" in d.columns:
@@ -689,18 +723,26 @@ def plot_vs_thickness(df: pd.DataFrame, out_png: str, ycol: str = "crystallinity
     ax.set_ylim(bottom=min(0, np.nanmin(d[ycol]) - 2))
     from matplotlib.lines import Line2D
     handles = [Line2D([], [], marker="o", ls="", color=c, label=k) for k, c in cmap.items()]
-    handles += [Line2D([], [], marker="o", ls="", markerfacecolor="none", color=PALETTE["ink2"],
-                       label="PdO(101) not detected")]
+    if show_detection:
+        handles.append(Line2D([], [], marker="o", ls="", markerfacecolor="none", color=PALETTE["ink2"],
+                              label="PdO(101) not detected"))
     ax.legend(handles=handles, loc="upper center", bbox_to_anchor=(0.5, -0.16), ncol=3,
               handletextpad=0.4, columnspacing=1.2)
     ax.set_title("Crystallinity grows with thickness; labels = design condition (mean position)",
                  loc="left", color=PALETTE["ink2"])
     fig.tight_layout()
-    fig.savefig(out_png, dpi=170, bbox_inches="tight")
-    plt.close(fig)
+    if out_png:
+        fig.savefig(out_png, dpi=170, bbox_inches="tight")
+    return fig
 
 
 # ---------------------------------------------------------------------- CLI
+def _close(fig) -> None:
+    if fig is not None:
+        import matplotlib.pyplot as plt
+        plt.close(fig)
+
+
 def _cfg_from_args(a) -> dict:
     cfg = dict(DEFAULT_CFG)
     cfg.update(window=tuple(a.window), bg1=tuple(a.bg1), bg2=tuple(a.bg2),
@@ -723,7 +765,8 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     p.add_argument("--substrate", default="auto",
                    help="'auto' | 'always' | 'never' | <column name of the bare-substrate scan>")
     p.add_argument("--ref", default="top3",
-                   help="reference area for 100 %%: 'max', 'topN', a sample name, or a number")
+                   help="reference area for 100 %%: 'max', 'topN', 'best_run' (best condition mean), "
+                        "'run<N>', a sample name, or a number")
     p.add_argument("--ref-per-nm", type=float, default=None,
                    help="pin the reference for the thickness-normalised index (area per nm)")
     p.add_argument("--snr-min", type=float, default=DEFAULT_CFG["snr_min"],
@@ -738,6 +781,8 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     p.add_argument("--no-despike", action="store_true")
     p.add_argument("--tag", default="", help="suffix for output file names (e.g. the delivery date)")
     p.add_argument("--no-figures", action="store_true")
+    p.add_argument("--csv", action="store_true",
+                   help="also write the per-sample table as CSV (a duplicate of the per_sample sheet)")
     a = p.parse_args(argv)
 
     sheets = a.sheet or ["sobol"]
@@ -788,18 +833,19 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
             runs.to_excel(w, sheet_name="per_run", index=False)
         refs.to_excel(w, sheet_name="references", index=False)
         config.to_excel(w, sheet_name="config", index=False)
-    df.to_csv(os.path.join(out_dir, f"xrd_crystallinity{suffix}_per_sample.csv"), index=False)
+    if a.csv:
+        df.to_csv(os.path.join(out_dir, f"xrd_crystallinity{suffix}_per_sample.csv"), index=False)
 
     if not a.no_figures:
         for sh, f in zip(sheets, frames):
             sub = df[df["sheet"] == sh].copy()
             sub.attrs["patterns"] = pats
-            plot_fits(sub, os.path.join(out_dir, f"pdo101_fits_{_slug(sh)}{suffix}.png"), cfg)
-        plot_by_run(df, os.path.join(out_dir, f"crystallinity_by_run{suffix}.png"))
+            _close(plot_fits(sub, os.path.join(out_dir, f"pdo101_fits_{_slug(sh)}{suffix}.png"), cfg))
+        _close(plot_by_run(df, os.path.join(out_dir, f"crystallinity_by_run{suffix}.png")))
         if "crystallinity_pct_thk" in df.columns and df["crystallinity_pct_thk"].notna().any():
-            plot_by_run(df, os.path.join(out_dir, f"crystallinity_thk_by_run{suffix}.png"),
-                        ycol="crystallinity_pct_thk")
-        plot_vs_thickness(df, os.path.join(out_dir, f"crystallinity_vs_thickness{suffix}.png"))
+            _close(plot_by_run(df, os.path.join(out_dir, f"crystallinity_thk_by_run{suffix}.png"),
+                               ycol="crystallinity_pct_thk"))
+        _close(plot_vs_thickness(df, os.path.join(out_dir, f"crystallinity_vs_thickness{suffix}.png")))
 
     show = [c for c in ["sheet", "sample", "run", "replicate", "thickness_final_nm", "auc_101_net",
                         "snr_fit", "fit_fwhm", "peak_detected", "crystallinity_pct",
