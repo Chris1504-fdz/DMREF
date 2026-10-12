@@ -8,7 +8,7 @@ per project:
 | sub-folder | project | material & objective | status (2026-10-08) |
 |---|---|---|---|
 | `inox/` | **InOx thin-film transistors** (first campaign, with the fab team's "NW collaboration") | sputtered indium oxide channel (XPS also shows a Ta 4f signal); maximise Hall mobility over 6 sputter/anneal knobs | paused Nov 2025 → Apr 2026 while the DoE was reworked; the constrained-Sobol batch-1 run sheet came back 2026-10 (`raw_data_received/inox/06_10_26/`) |
-| `pdo/` | **PdO films** (second campaign, with the other student) | sputtered Pd oxidised to PdO on Al₂O₃ / HfO₂ / Si stacks; mobility ↑, carrier concentration ↓, crystallinity ↓ over 10 knobs | see `PROJECT_STATUS.md` and `output/README.md` |
+| `pdo/` | **PdO films** (second campaign, with the other student) | sputtered Pd oxidised to PdO on Al₂O₃ / HfO₂ / Si stacks; mobility ↑, carrier concentration ↓, crystallinity ↓ over 10 knobs | see `PROJECT_STATUS.md` and `output/README.md`; next design = four substrates as one sliced design (`doe/pdo/pdo_four_substrates_doe_compare.ipynb`, 2026-10-10) |
 
 ## Repository layout
 
@@ -25,7 +25,9 @@ repository_dmref/
 ├── doe/                          # design-of-experiments notebooks
 │   ├── inox/   doe_design.ipynb            L8 → L32 Taguchi, Sobol, constrained Sobol v03 (batch 1 = the 06_10_26 sheet)
 │   │           inox_batch1_sampler_comparison.ipynb   Sobol vs Halton / LHS / optimised LHS / CD + w·|r| LHS on this space; builds the batch-1 design (435-600 °C, no RT)
-│   └── pdo/    experiment03_hfo2_doe_design.ipynb, experiment03_hfo2_batch1_analysis_doe_n_caped_300.ipynb,
+│   │           inox_batch1_doe_compare.ipynb + .yaml  the same study run with the shared doe_compare package (sibling repo ../doe_compare); SAVE_* flag per cell
+│   └── pdo/    pdo_four_substrates_doe_compare.ipynb + .yaml  the four-substrate design (substrate = 4-level slicing factor, sliced LHS placed around the recipes in hand) with doe_compare
+│               experiment03_hfo2_doe_design.ipynb, experiment03_hfo2_batch1_analysis_doe_n_caped_300.ipynb,
 │               experiment04_si_stacks_doe_design.ipynb, sampler_bo_1d_test.ipynb, sampler_bo_hd_batches_test.ipynb
 ├── data_pipeline/inox/data_pipeline.ipynb   builds the InOx master table + mixed-Taguchi candidates
 ├── analysis/
@@ -54,6 +56,9 @@ Conventions:
   table cell (see `output/README.md`). Older InOx notebooks still save unconditionally, into `output/inox/`.
 - Every notebook `os.chdir()`s to the repository root in its first code cell, so relative paths work from anywhere.
 - Received data goes under `raw_data_received/<project>/<date or topic>/` with a `note.txt` / `info.txt` saying how it arrived.
+- The `*_doe_compare.ipynb` notebooks import the shared sampler-comparison package from the sibling repository
+  `/data/zhq7531/IDEAL/DMREF/doe_compare` (GitHub: Chris1504-fdz/optimized_lhs); rebuild them with its `notebooks/build_notebook.py
+  <config> <out> --package-dir ../doe_compare --repo-root . --out-dir output/<project>/<study>` after editing the YAML.
 
 ## InOx sub-project (`inox/`)
 
@@ -108,8 +113,11 @@ CD + 0.1 × |r| Latin hypercube, seed 8 — written to `output/inox/batch1_desig
 Ten process knobs (deposition power / O₂ flow / pressure / temperature / thickness, oxidation temperature / pressure /
 time, vacuum-anneal temperature / time), three objectives (Hall mobility ↑, carrier concentration ↓, PdO(101) relative
 crystallinity ↓). Experiment 02 = Sobol batch on Al₂O₃ (analysed), experiment 03 = HfO₂ (dropped), experiment 04 =
-Al₂O₃-on-Si and TiO₂-on-Si sliced-LHS design (current). Narrative and figures: `PROJECT_STATUS.md`; per-folder detail:
-`output/README.md`; reusable GP + MOBO code: `utils/mobo.py`.
+Al₂O₃-on-Si and TiO₂-on-Si sliced-LHS design (fabricated, waiting for data). **Next design (2026-10-10):** the four substrates
+(Al₂O₃/sapphire, Al₂O₃/Si, TiO₂/Si, HfO₂/Si) as one categorical slicing factor; a sliced optimised LHS of 23 new recipes per
+substrate × 5 replicates on the experiment-04 bounds (vacuum anneal ≤ 300 °C), placed around the 56 recipes already in hand
+(9 sapphire recipes inside the bounds, the 46 fabricated Si recipes, 1 HfO₂ trial recipe) — `doe/pdo/pdo_four_substrates_doe_compare.ipynb`.
+Narrative and figures: `PROJECT_STATUS.md`; per-folder detail: `output/README.md`; reusable GP + MOBO code: `utils/mobo.py`.
 
 ## How to run
 

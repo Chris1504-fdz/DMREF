@@ -1,0 +1,20 @@
+# InOx TFT campaign, batch 1 (decided 2026-10-08): integer substrate temperature 435-600 C, no room-temperature runs,
+# anneal drawn above the substrate temperature. Factor order = unit-cube column order of the original generator.
+name: InOx batch 1 (435-600 C, no RT)
+factors:
+  - {name: "Power (W)",                  kind: integer,     low: 10,   high: 30}
+  - {name: "Substrate Temperature (C)",  kind: integer,     low: 435,  high: 600}
+  - {name: "Oxygen Flow Rate (sccm)",    kind: continuous,  low: 0.3,  high: 3.0, step: 0.1}
+  - {name: "Background Pressure (Torr)", kind: continuous,  low: 2.0,  high: 4.0, step: 0.1}   # values are mTorr; header kept as in the fab sheet
+  - {name: "Annealing Temperature (C)",  kind: integer,     low: 150,  high: 600}
+  - {name: "Annealing Condition",        kind: categorical, levels: [N, O]}
+constraints:
+  - {type: ordered, lower: "Substrate Temperature (C)", upper: "Annealing Temperature (C)", strict: true}
+study:
+  workers: 8                      # processes for the studies on a cluster node (-1 = every core; remove for serial)
+  n: 30
+  repetitions: 3
+  seeds: 10
+  corr_weight: 0.1
+  plane_ylim: [400, null]         # zoom of the substrate vs anneal figure (the feasible triangle starts near 435 C)
+  sheet_columns: ["Power (W)", "Substrate Temperature (C)", "Oxygen Flow Rate (sccm)", "Background Pressure (Torr)", "Annealing Condition", "Annealing Temperature (C)"]

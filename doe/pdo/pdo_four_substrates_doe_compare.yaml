@@ -1,0 +1,53 @@
+# PdO on four substrates as one design: the substrate is a categorical factor with four levels and the slicing factor of
+# a sliced optimised LHS (every substrate gets its own 23-point Latin hypercube; the union of 92 is one too). Bounds =
+# the experiment04 Si-stack bounds (repository_dmref/doe/pdo/experiment04_si_stacks_doe_design.ipynb), which hold the
+# sapphire data and the two fabricated Si batches; the vacuum anneal is capped at 300 C (the HfO2 constraint). The
+# recipes already in hand are `known:` points the conditional / sliced optimisers place the new batch around.
+name: PdO on four substrates (Al2O3/sapphire, Al2O3/Si, TiO2/Si, HfO2/Si), anneal capped at 300 C
+slice_factor: Substrate
+factors:
+  - {name: "Substrate",           kind: categorical, levels: ["Al2O3/sapphire", "Al2O3/Si", "TiO2/Si", "HfO2/Si"]}
+  - {name: "Dep Power (W)",       kind: continuous, low: 2.0,   high: 40.0,  step: 1.0}
+  - {name: "O2 Flow (sccm)",      kind: continuous, low: 0.3,   high: 20.0,  step: 0.1}
+  - {name: "Dep Press (mTorr)",   kind: continuous, low: 2.0,   high: 10.0,  step: 0.1}
+  - {name: "Dep Temp (°C)",       kind: categorical, levels: [25, 425]}
+  - {name: "Ox Temp (°C)",        kind: continuous, low: 200.0, high: 700.0, step: 5.0}
+  - {name: "Ox Press (atm)",      kind: categorical, levels: [0.02, 1.0]}
+  - {name: "Ox Time (min)",       kind: continuous, low: 0.0,   high: 120.0, step: 0.1}
+  - {name: "Vac Ann Temp (°C)",   kind: continuous, low: 25.0,  high: 300.0, step: 5.0}
+  - {name: "Vac Ann Time (min)",  kind: continuous, low: 0.0,   high: 120.0, step: 0.1}
+  - {name: "Dep Thickness (nm)",  kind: continuous, low: 1.0,   high: 10.0,  step: 0.1}
+known:
+  - name: "Al2O3/sapphire - experiment 02 films (measured)"
+    path: Processed_data_inputs/pdo/experiment02/Raw_update_05_22_2026.txt
+    sep: "\t"
+    set: {Substrate: "Al2O3/sapphire"}
+  - name: "Al2O3/Si - experiment 04 batch (fabricated, waiting for data)"
+    path: output/pdo/experiment04_si_stacks_doe/PdO_SiStacks_sliced_design.xlsx
+    sheet: AlSi_unique
+    set: {Substrate: "Al2O3/Si"}
+  - name: "TiO2/Si - experiment 04 batch (fabricated, waiting for data)"
+    path: output/pdo/experiment04_si_stacks_doe/PdO_SiStacks_sliced_design.xlsx
+    sheet: TiSi_unique
+    set: {Substrate: "TiO2/Si"}
+  - name: "HfO2/Si - experiment 03 batch 1 (5 conditions, 2 measurable)"
+    path: output/pdo/experiment03_hfo2_batch1_analysis/received_batch1_transcribed.xlsx
+    set: {Substrate: "HfO2/Si"}
+study:
+  workers: 8                      # processes for the studies on a cluster node (-1 = every core; remove for serial)
+  n: 92                           # 23 recipes per substrate x 4 substrates
+  repetitions: 5
+  seeds: 10
+  corr_weight: 0.1
+  corr_scope: whole               # |r| term of the optimisers: whole = the pooled design; levels = also every level of every categorical factor
+  methods: ["Sobol (scrambled)", "Halton (scrambled)", "Plain LHS", "Optimised LHS (random-CD)", "LHS: CD + w×|r|", "Sliced LHS", "Uniform random"]
+  sequential:
+    rounds: 3                       # 92 -> 184 -> 276 new recipes on top of the known ones
+    seeds: 3
+    methods: ["Sobol (scrambled)", "Plain LHS", "Optimised LHS (random-CD)", "Optimised LHS + conditional", "Weighted LHS + conditional", "Sliced LHS, conditional"]
+  screen: {method: "Sliced LHS, conditional", seeds: 10}
+  sweep: {weights: [0.0, 0.05, 0.1, 0.2, 0.5], seeds: 6, n_iter: 3000}
+  pick: {max_corr: 0.15}
+  id_col: Base_Run_ID
+  rep_col: Replicate
+  sheet_columns: ["Substrate", "Dep Power (W)", "O2 Flow (sccm)", "Dep Press (mTorr)", "Dep Temp (°C)", "Ox Temp (°C)", "Ox Press (atm)", "Ox Time (min)", "Vac Ann Temp (°C)", "Vac Ann Time (min)", "Dep Thickness (nm)"]

@@ -9,10 +9,13 @@ Two sub-projects since 2026-10-08: **`pdo/`** (PdO films, with the other student
 - `DoE/` — save folder of `doe/inox/doe_design.ipynb` (L32 tables, Sobol tables, `sobol_constrained_batch_1_repeated.xlsx` = the sheet the fab team returned in `raw_data_received/inox/06_10_26/`).
 - `sobol_batch1_provenance/` — empty by default; `analysis/inox/inox_sobol_batch1_provenance.ipynb` (what the returned batch-1 sheet is, the data before it, why Taguchi then Sobol, and the 435–600 °C substrate-temperature question) writes its tables / figures / revised run sheets here when `SAVE_OUTPUTS = True`.
 - `batch1_design/` — **the batch-1 design to send**, empty by default: §6 of `doe/inox/inox_batch1_sampler_comparison.ipynb` writes it when its per-item flags are set — `SAVE_DESIGN_WORKBOOK = True` → `inox_batch1_design_435_600_noRT_cd_wcorr_lhs.xlsx` (sheets `design_full` = 30 conditions × 3 repetitions in the fab team's column layout, `design_unique`, `config`, `provenance`, `alternatives`); `SAVE_DESIGN_PAIRPLOT` / `SAVE_DESIGN_CORRELATION` / `SAVE_DESIGN_CONSTRAINT` → the pair plot, correlation heatmap and constraint plane; `SAVE_ALT_SOBOL_SHEET` / `SAVE_ALT_OLHS_SHEET` → the two alternative sheets. Generator of the chosen design: Latin hypercube optimised on centered L2 discrepancy + 0.1 × max |r| (seed 8, front pick of the weight sweep), integer substrate 435–600 °C, no room-temperature runs, anneal above substrate.
+- `batch1_doe_compare/` — empty by default; `doe/inox/inox_batch1_doe_compare.ipynb` (the same comparison run with the shared `doe_compare` package) writes here when its per-cell `SAVE_*` flags are set.
 - `batch1_sampler_comparison/` — empty by default; the comparison study of the same notebook (Sobol vs Halton / plain LHS / optimised LHS / CD + w × |r| LHS / uniform, single and cumulative batches, Sobol seed screening, the correlation-weight sweep) writes its tables and figures here when the per-item `SAVE_*` flags in its cells are set.
 - `previous_studies/previous_temp/` — InOx-era working files (ANOVA / CV / GP trials, design drafts), see its README.
 
 ## PdO — active studies (`pdo/`)
+
+- `four_substrates_doe_compare/` — empty by default; `doe/pdo/pdo_four_substrates_doe_compare.ipynb` (the four-substrate design: substrate as a 4-level slicing factor, sliced optimised LHS of 23 new recipes per substrate × 5 replicates placed around the recipes already in hand, compared with the other generators with the shared `doe_compare` package) writes here when its per-cell `SAVE_*` flags are set.
 
 ### `experiment04_si_stacks_doe/` — PdO on Si-based stacks: optimised-LHS design for Al₂O₃-on-Si and TiO₂-on-Si (2026-09-16)
 
